@@ -1,7 +1,9 @@
-### Chat GPT model
-I am running on **GPT-4-turbo**, which is optimized for speed and efficiency while maintaining high-quality responses. My parameters (such as temperature) are dynamically adjusted by OpenAI to balance creativity, accuracy, and coherence.  
+### Chat GPT model.
+I am running on **GPT-4-turbo**, which is optimized for speed and efficiency while maintaining high-quality responses. I'm using the unpaid version
 
-this is a chatgpt response.
+## prompting guide.
+https://platform.openai.com/docs/guides/prompt-engineering
+
 
 ### **Japanese Translation:**
 
