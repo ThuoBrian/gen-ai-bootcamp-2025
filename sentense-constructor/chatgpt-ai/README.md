@@ -1,3 +1,7 @@
+### Chat GPT model
+I am running on **GPT-4-turbo**, which is optimized for speed and efficiency while maintaining high-quality responses. My parameters (such as temperature) are dynamically adjusted by OpenAI to balance creativity, accuracy, and coherence.  
+
+
 ### **Japanese Translation:**
 
 おはようございます。宿題に問題がありました。助けてもらえますか？
