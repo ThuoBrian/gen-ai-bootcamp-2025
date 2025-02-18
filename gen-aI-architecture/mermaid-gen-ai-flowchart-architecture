@@ -1,0 +1,36 @@
+flowchart TD
+
+    %% User Input
+    A[User] -->|Query| B[Input GuardRail Validate & Sanition]
+    
+    %% Input Guardrail Checks
+    B -- Valid Input --> C[Rate Limiting & Authentication]
+    B -- Invalid Input --> X1[Reject Request & Return Error]
+    
+    %% Authentication & Security Checks
+    C -- Authorized --> D[Monitoring & Security Log Input & Track Requests]
+    C -- Unauthorized --> X2[Reject Request & Return Auth Error]
+    
+    %% Model Inference
+    D --> E[Model Inference]
+    E --> F[AI Model ChatGPT or Local AI]
+    
+    %% AI Response Processing
+    F --> G[Output GuardRail Validate & Filter Output]
+    G -- Safe Output --> H[Final Response to User]
+    G -- Unsafe Output --> X3[Return Safe Fallback Response]
+    
+    %% Monitoring & Feedback Loop
+    D -->|Monitor| M[Logging & Observability]
+    G -->|Monitor| M
+    X3 -->|Flag for Review| M
+    
+    %% Feedback Loop
+    M -->|Improve AI & GuardRails| F
+    
+    %% Error Nodes (Rejections)
+    X1 -.->|Send Error Message| A
+    X2 -.->|Send Auth Error| A
+    X3 -.->|Send Safe Response| A
+
+ 
